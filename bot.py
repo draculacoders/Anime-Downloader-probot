@@ -31,6 +31,10 @@ if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
 else:
     from config import Config
+    
+    API_ID = os.environ.get("API_ID", None)
+API_HASH = os.environ.get("API_HASH", None)
+BOT_TOKEN = os.environ.get("TOKEN", None)
 
 pgram = TelegramClient('bot', API_ID, API_HASH).start(bot_token=TG_BOT_TOKEN)
 
