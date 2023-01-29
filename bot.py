@@ -1,7 +1,7 @@
 import os
 import config
 import logging
-from telethon import Client
+from telethon import TelegramClient
 
 from pyrogram import *
 from pyrogram.handlers import *
@@ -32,7 +32,7 @@ if bool(os.environ.get("WEBHOOK", False)):
 else:
     from config import Config
 
-pgram = TelegramClient('bot', API_ID, API_HASH).start(bot_token=BOT_TOKEN)
+pgram = TelegramClient('bot', API_ID, API_HASH).start(bot_token=TG_BOT_TOKEN)
 
 # Adding all functions to Handlers in main() function
 def main():
