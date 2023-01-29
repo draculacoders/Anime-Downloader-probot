@@ -44,21 +44,21 @@ pgram = Client(
 
 # Adding all functions to Handlers in main() function
 def main():
-    bot.add_handler(MessageHandler(anime_search, filters.regex(r'search')), group=1)
-    bot.add_handler(MessageHandler(start_message, filters.command('start')), group=2)
-    bot.add_handler(MessageHandler(dev_info, filters.command('info')), group=3)
-    bot.add_handler(MessageHandler(genres, filters.command('genres')), group=4)
-    bot.add_handler(InlineQueryHandler(inline_search), group=6)
-    bot.add_handler(MessageHandler(airing_eps, filters.command("airing")), group=7)
-    bot.add_handler(CallbackQueryHandler(anime_details, filters.regex('dt_*')), group=8)
-    bot.add_handler(CallbackQueryHandler(get_epIndex, filters.regex('dl_*')), group=9)
-    bot.add_handler(CallbackQueryHandler(get_ep_link, filters.regex('eps_*')), group=10)
-    bot.add_handler(CallbackQueryHandler(genre_results, filters.regex('genre/')), group=11)
-    bot.add_handler(CallbackQueryHandler(instructions, filters.regex('instructions')), group=12)
-    bot.add_handler(MessageHandler(anime_inline_details, filters.text), group=13)
-    bot.add_handler(CallbackQueryHandler(get_ep, filters.regex('eplink_*')), group=14)
+    pgram.add_handler(MessageHandler(anime_search, filters.regex(r'search')), group=1)
+    pgram.add_handler(MessageHandler(start_message, filters.command('start')), group=2)
+    pgram.add_handler(MessageHandler(dev_info, filters.command('info')), group=3)
+    pgram.add_handler(MessageHandler(genres, filters.command('genres')), group=4)
+    pgram.add_handler(InlineQueryHandler(inline_search), group=6)
+    pgram.add_handler(MessageHandler(airing_eps, filters.command("airing")), group=7)
+    pgram.add_handler(CallbackQueryHandler(anime_details, filters.regex('dt_*')), group=8)
+    pgram.add_handler(CallbackQueryHandler(get_epIndex, filters.regex('dl_*')), group=9)
+    pgram.add_handler(CallbackQueryHandler(get_ep_link, filters.regex('eps_*')), group=10)
+    pgram.add_handler(CallbackQueryHandler(genre_results, filters.regex('genre/')), group=11)
+    pgram.add_handler(CallbackQueryHandler(instructions, filters.regex('instructions')), group=12)
+    pgram.add_handler(MessageHandler(anime_inline_details, filters.text), group=13)
+    pgram.add_handler(CallbackQueryHandler(get_ep, filters.regex('eplink_*')), group=14)
     
-    bot.add_handler(MessageHandler(recently_eps, filters.command("recently")), group=15)
+    pgram.add_handler(MessageHandler(recently_eps, filters.command("recently")), group=15)
 
 # Calling main method and handlers, polling state
 if __name__ == '__main__':
