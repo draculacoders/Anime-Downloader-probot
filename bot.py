@@ -36,9 +36,9 @@ else:
 session_name = TOKEN.split(":")[0]
 pgram = Client(
     session_name,
-    api_id=Config.APP_ID,
-    api_hash=\Config.API_HASH,
-    bot_token=Config.TG_BOT_TOKEN,
+    api_id=config.APP_ID,
+    api_hash=\config.API_HASH,
+    bot_token=config.TG_BOT_TOKEN,
 )
 
 # Adding all functions to Handlers in main() function
