@@ -32,9 +32,7 @@ else:
     from config import Config
 
     
-TOKEN=Config.TG_BOT_TOKEN
-# Creating a Session to activate all Handlers
-session_name = TOKEN.split(":")[0]
+
 pgram = Client(
     session_name,
     api_id=Config.APP_ID,
